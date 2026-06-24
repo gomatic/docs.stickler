@@ -1,0 +1,9 @@
+{
+  "baseURL": "https://example.org/",
+  "title": "Project Documentation",
+  "publishDir": "_site",
+  "enableRobotsTXT": true,
+  "params": {
+    "description": "Public documentation for the project."
+  }
+}
