@@ -9,7 +9,7 @@ help: ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "\033[36m%-10s\033[0m %s\n",$$1,$$2}'
 
 .PHONY: serve
-serve: ## Preview the docs locally
+serve: ## Preview the public docs locally
 	hugo server --source $(here)
 
 .PHONY: build

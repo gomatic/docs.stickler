@@ -1,19 +1,31 @@
-# stickler.docs
+# docs.stickler
 
-Documentation for [`gomatic/stickler`](https://github.com/gomatic/stickler) — a standalone Go linter that enforces the gomatic Go Code Quality Standards (structural/layout conformance plus the bespoke rules off-the-shelf linters don't cover). The source repository carries only a minimal `README.md`; everything else lives here. Follows [`nicerobot/template.docs`](https://github.com/nicerobot/template.docs).
+The **public documentation** site for [`gomatic/stickler`](https://github.com/gomatic/stickler). Built from [`nicerobot/template.repo-docs`](https://github.com/nicerobot/template.repo-docs) as a self-contained [Hugo](https://gohugo.io) site, published to GitHub Pages.
 
 ## Layout
 
 | Path | Purpose |
 |------|---------|
-| [`content/`](content/) | Public-facing documentation — Markdown for this self-contained [Hugo](https://gohugo.io) site, rendered by GitHub Pages **if** the repository is made public and Pages is enabled. |
+| [`content/`](content/) | The documentation — Hugo site content. |
+| [`layouts/`](layouts/) | Hugo templates. |
+| [`hugo.json`](hugo.json) | Hugo configuration. |
 | [`.github/workflows/pages.yml.disabled`](.github/workflows/pages.yml.disabled) | The GitHub Pages build workflow, **disabled** by its `.disabled` suffix (GitHub Actions only runs `*.yml`). |
-| [`Makefile`](Makefile) | Local preview and build of the site. Run `make` for help. |
+| [`Makefile`](Makefile) | Local preview and build. Run `make` for help. |
+
+## Public, with a disabled workflow
+
+Everything here is **public** — it exists to be published, so there is no `public/`/`private/` split. Anything private (ideas, tasks, specs) belongs in the project's private hub repo, never here.
+
+GitHub Pages is unavailable on private repos in free orgs, so this repo ships ready to go public: the Pages workflow is present but **disabled** until the repo is public and Pages is enabled.
+
+## Preview locally
+
+```bash
+make serve    # http://localhost:1313
+```
 
 ## Going public
 
-When the repository is made public:
-
 1. Enable Pages: **Settings → Pages → Source: GitHub Actions**.
 2. Activate the workflow: `git mv .github/workflows/pages.yml.disabled .github/workflows/pages.yml`
-3. Push. The site builds from the repository root.
+3. Push. The whole site builds and publishes.

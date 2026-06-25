@@ -5,7 +5,7 @@
 #
 #     git mv .github/workflows/pages.yml.disabled .github/workflows/pages.yml
 #
-# It builds the Hugo site at the repository root.
+# It builds the Hugo site at the repo root — every doc in this repo is public.
 name: pages
 
 on:
