@@ -8,7 +8,7 @@ title: stickler
 
 ## Usage
 
-```
+```text
 stickler [--format human|json|github] [root]
 ```
 
